@@ -1,0 +1,27 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+      - data/raw/X.csv
+      - data/raw/Y.csv
+      - src/train.py
+    params:
+      - train.epochs
+      - train.batch_size
+      - train.test_size
+    outs:
+      - models/model.pkl
+    metrics:
+      - metrics/train_metrics.json:
+          cache: false
+  
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+      - models/model.pkl
+      - data/raw/X.csv
+      - data/raw/Y.csv
+      - src/evaluate.py
+    metrics:
+      - metrics/eval_metrics.json:
+          cache: false

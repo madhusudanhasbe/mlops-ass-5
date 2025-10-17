@@ -1,7 +1,26 @@
+# Data files (tracked by DVC)
+/data/raw/X.csv
+/data/raw/Y.csv
+
+# Model files
+/models/
+
+# Metrics
+/metrics/
+
+# Python
 __pycache__/
-*.pyc
-.venv/
-.env/
-*.pkl
-/X.csv
-/y.csv
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,2 +1,5 @@
+flask
 pandas
-pytest
+scikit-learn
+dvc[s3]
+numpy

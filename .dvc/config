@@ -1,0 +1,5 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = s3://mlops-ass-5/dvc-storage
+    region = us-east-1
